@@ -51,11 +51,13 @@ modules:
   type: html5
   path: .
   build-parameters:
+    before-all:
     build-result: dist
     builder: custom
     commands:
     - npm install
     - npm run build:cf
+    - npx cds build --production
     supported-platforms: []
 resources:
 - name: project1-destination-service
